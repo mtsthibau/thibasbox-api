@@ -48,4 +48,4 @@ app.use('/files', express.static(path.resolve(__dirname, "..", "tmp")));
 app.use(require('./routes'));
 
 //Configuração de porta do servidor NODE.JS
-server.listen(3333);
+server.listen(process.env.PORT || 3333);
