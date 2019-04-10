@@ -13,7 +13,7 @@ class FileController {
         box.files.push(file);
         await box.save();
 
-        //Sincronização de arquivos criados
+        //Sincronização de arquivos criados 
         req.io.sockets.in(box._id).emit("file", file);
 
         return res.json(file);
