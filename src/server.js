@@ -22,7 +22,7 @@ socketIo.on("connection", socket => {
     })
 });
 
-//Utilizando mongoose para conexão com banco de dados Mongo (Altas)
+//Utilizando mongoose para conexão com banco de dados Mongo (ATLAS)
 mongoose.connect('mongodb+srv://admin:admin@cluster0-uzq3w.mongodb.net/thibasbox?retryWrites=true',
     {
         useNewUrlParser: true
