@@ -17,7 +17,7 @@ const socketIo = require("socket.io")(server);
 //Configurando RealTime com Socket.IO
 socketIo.on("connection", socket => {
     //Configurando rota dentro do socket para room exclusiva para cada usuário
-    socketIo.on('connectionRoom', box => {
+    socketIo.on('connectRoom', box => {
         socketIo.join(box);
     })
 });
@@ -49,3 +49,9 @@ app.use(require('./routes'));
 
 //Configuração de porta do servidor NODE.JS
 server.listen(process.env.PORT || 3333);
+
+
+
+
+
+
