@@ -17,8 +17,8 @@ const socketIo = require("socket.io")(server);
 //Configurando RealTime com Socket.IO
 socketIo.on("connection", socket => {
     //Configurando rota dentro do socket para room exclusiva para cada usuário
-    socketIo.on('connectRoom', box => {
-        socketIo.join(box);
+    socket.on('connectRoom', box => {
+        socket.join(box);
     })
 });
 
